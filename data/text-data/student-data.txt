@@ -1,0 +1,6 @@
+id,first name,last name,date of birth,street,city,state,zip
+1,Michael,Scott,2001-01-01T10:15:30+01:00,123 gold street,Edmond,Oklahoma,73034
+2,Robert,California,1987-05-01T10:15:30+01:00,46 silver street,Oklahoma City,Oklahoma,73013
+1001,Any,Bernard,2005-05-06T10:15:30+01:00,55 yellow street,Oklahoma City,Oklahoma,73013
+4,Ryan,Howard,1999-06-01T10:15:30+01:00,33 purple street,Oklahoma City,Oklahoma,73008
+5,Oscar,Martinez,1988-07-09T10:15:30+01:00,98 green street,Norman,Oklahoma,73070
