@@ -1,0 +1,5 @@
+{
+  "dburl": "jdbc:postgresql://{databaseHost}:{databasePort}/{databaseName}",
+  "dbusername": "{databaseUser}",
+  "dbpassword": "{databasePassword}"
+}

@@ -1,5 +1,6 @@
 package com.bik.smalldata;
 
+import com.bik.smalldata.database.DatabaseOperations;
 import com.bik.smalldata.filereader.FileReaderApp;
 import com.bik.smalldata.filewriter.FileWriterApp;
 
@@ -29,7 +30,10 @@ public class Main
     public static void main(String... args)
     {
         System.out.println("Running Data Analysis Application Written in Java");
-        List<Runnable> tasks = List.of(new FileWriterApp());
+        List<Runnable> tasks = List.of(
+                new FileWriterApp(),
+                new FileReaderApp(),
+                new DatabaseOperations());
         for(Runnable task: tasks)
         {
             executor.submit(task);

@@ -5,6 +5,17 @@ SELECT * FROM information_schema.tables;
 SELECT * FROM information_schema.tables
 where table_schema = 'public';
 
+
+create table event_users
+(
+	id bigint generated always as identity,
+	email varchar(256) not null,
+	first_name varchar(256) not null,
+	last_name varchar(256) not null,
+	PRIMARY KEY (id)
+);
+
+
 SELECT
    table_name,
    column_name,
@@ -16,23 +27,16 @@ WHERE
 
 
 INSERT INTO event_users (email, first_name, last_name)
-VALUES ('ramu@techpasya.com', 'Ram', 'Bhandari')
+VALUES ('ramu@techpasya.com', 'Ram', 'Bhandari');
 
 INSERT INTO event_users (email, first_name, last_name)
 VALUES ('hari@techpasya.com', 'Hari', 'Thapa'),
 ('shyam@techpasya.com', 'Shyam', 'Gurung'),
-('rajesh@techpasya.com', 'Rajesh', 'Chaudhary')
+('rajesh@techpasya.com', 'Rajesh', 'Chaudhary');
 
 Select * from event_users;
 
-create table event_users
-(
-	id bigint generated always as identity,
-	email varchar(256) not null,
-	first_name varchar(256) not null,
-	last_name varchar(256) not null,
-	PRIMARY KEY (id)
-)
+
 
 CREATE Table events
 (
@@ -44,13 +48,13 @@ CREATE Table events
 
 )
 Select * from events;
-INSERT INTO events (event_name, event_time, event_location)
-VALUES ('Coffee With Friends', '2021-11-19 14:00:00', '1234 Main Street, Edmond, OK 73034')
 
+INSERT INTO events (event_name, event_time, event_location)
+VALUES ('Coffee With Friends', '2021-11-19 14:00:00', '1234 Main Street, Edmond, OK 73034');
 
 INSERT INTO events (event_name, event_time, event_location)
 VALUES ('Fundraising For Street Children', '2022-01-19 14:00:00', '24 greenroad Street, Edmond, OK 73034')
-, ('Awareness Against Phone Scam', '2022-01-10 10:30:00', '34 greenleaf street, Edmond, OK 73034')
+, ('Awareness Against Phone Scam', '2022-01-10 10:30:00', '34 greenleaf street, Edmond, OK 73034');
 
 CREATE Table event_participants
 (
@@ -64,7 +68,7 @@ CREATE Table event_participants
 	constraint fk_events
 		FOREIGN KEY(event_id)
 			REFERENCES events (id)
-)
+);
 
 
 CREATE Index idx_event_participants_event_id

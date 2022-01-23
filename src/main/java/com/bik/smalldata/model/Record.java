@@ -13,20 +13,14 @@ import java.time.OffsetDateTime;
 public class Record
 {
     private Long id;
-
     private String firstName;
-
     private String lastName;
-
     private OffsetDateTime dateOfBirth;
 
     private String street;
     private String city;
     private String state;
     private Long zip;
-
-
-
 
     public Record(final RecordBuilder recordBuilder)
     {
