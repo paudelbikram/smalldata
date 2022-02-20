@@ -33,7 +33,8 @@ public class Main
         List<Runnable> tasks = List.of(
                 new FileWriterApp(),
                 new FileReaderApp(),
-                new DatabaseOperations());
+                new DatabaseOperations()
+        );
         for(Runnable task: tasks)
         {
             executor.submit(task);
